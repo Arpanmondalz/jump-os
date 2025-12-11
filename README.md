@@ -20,7 +20,7 @@ Jump‑OS is a browser-based fitness tracker that uses your webcam and a frame�
 ## 🎮 How to use
 
 ### Online (GitHub Pages)
-1. Visit the live site
+1. Visit the live site: https://arpanmondalz.github.io/jump-os/
 2. Grant camera permissions when prompted.
 3. Set target jump count and sensitivity (default sensitivity is pretty good though)
 4. Click **START SESSION** and stand still for 5 seconds (calibration).
