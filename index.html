@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JUMP-OS</title>
+    
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="game.js"></script>
+
+    <!-- FAVICON (Browser Tab) -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- APPLE TOUCH ICON (iOS Home Screen) -->
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- MANIFEST (Android Install) -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <audio id="snd-coin" src="audio/coin.mp3"></audio>
+    <audio id="snd-alert" src="audio/milestone.mp3"></audio>
+    <audio id="snd-win" src="audio/win.mp3"></audio>
+
+    <!-- SETUP -->
+    <div id="setup-screen" class="screen active">
+        <h1>JUMP-OS</h1>
+        
+        <div class="input-container">
+            <div class="input-group">
+                <input type="number" id="targetInput" value="50" placeholder="50">
+                <div class="label">TARGET</div>
+            </div>
+            
+            <div class="slider-group">
+                <input type="range" id="sensInput" min="3" max="20" value="8">
+                <div class="label">SENSITIVITY</div>
+                <div class="sub-label">LOW (3) - HIGH (20)</div>
+            </div>
+        </div>
+
+        <button id="calibBtn">START SESSION</button>
+    </div>
+
+    <!-- CALIBRATION -->
+    <div id="calibration-screen" class="screen">
+        <video id="video-feed" playsinline autoplay muted></video>
+        <div id="overlay-msg">STAND STILL...</div>
+    </div>
+
+    <!-- GAME -->
+    <div id="game-screen" class="screen">
+        <video id="tracking-video" playsinline autoplay muted></video>
+        
+        <button id="restartBtn">RESTART</button>
+        
+        <div id="badges-container">
+            <div id="badge-50" class="badge">50%</div>
+            <div id="badge-90" class="badge">90%</div>
+        </div>
+        <div id="xp-display">XP: 0</div>
+
+        <div class="hud-center">
+            <div id="counter">0</div>
+            <div id="status-msg">SYSTEM ARMED</div>
+        </div>
+
+        <div class="hud-bottom">
+            <div id="progress-bar"><div id="progress-fill"></div></div>
+            <div id="target-display">TARGET: 50</div>
+        </div>
+    </div>
+
+</body>
+</html>
